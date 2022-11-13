@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends 'admin/master.html' %}
+{% block head_css %}
+
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='admin/index.css') }}">
+{% endblock %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/index.css" />
+    <link rel="icon" href="../static/logo.png" />
+</head>
+
+<body>
+
+</body>
+
+</html>
+{% block body %}
+<div class="bg-img">
+    <h1 style="color: red; font-family: Cambria;display:flex;justify-content:center;">ADMIN PAGE </h1>
+
+    <div class="container-block">
+
+        <div class="users-block">
+            <a class="nav-link" href="/admin/users/"><img src="../static/images/users.png">Users</a>
+        </div>
+        <div class="profiles-block">
+            <a class="nav-link" href="/admin/profiles/"><img src="../static/images/profiles.png">  Profiles</a>
+        </div>
+        <div class="results-block">
+            <a class="nav-link" href="/admin/courses/"><img src="../static/images/courses.png">   Courses</a>
+        </div>
+        <div class="courses-block">
+            <a class="nav-link" href="/admin/results/"><img src="../static/images/results.png">   Results</a>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
