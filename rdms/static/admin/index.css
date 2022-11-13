@@ -1,0 +1,44 @@
+
+.container-block {
+    display:flex;
+    margin:auto;
+    margin-top:5%;
+    width:500px;
+    height:300px;
+    flex-direction:row;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+}
+
+.profiles-block {
+    background-color:lightSkyBlue;
+    box-shadow:5px 5px 5px #3399ff;
+}
+
+.users-block {
+    background-color:PaleTurquoise;
+    box-shadow:5px 5px 5px turquoise;
+}
+
+.courses-block {
+    background-color:LightSalmon;
+    box-shadow:5px 5px 5px salmon;
+}
+
+.results-block {
+    background-color:lightpink;
+    box-shadow:5px 5px 5px pink;
+}
+
+.users-block,.profiles-block,.courses-block,.results-block {
+    display:flex;
+    width:40%;
+    align-items:center;
+    padding:10px;
+    border-radius:10px;
+    font-size:25px;
+    height:40%;
+}
+
+
+
