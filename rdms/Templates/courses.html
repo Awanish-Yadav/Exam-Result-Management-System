@@ -1,0 +1,204 @@
+a{% extends 'admin/master.html' %}
+
+{% block head_css %}
+
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='admin/style.css') }}">
+{% endblock %}
+
+{% block body %}
+
+
+<div class="page-content p-5" id="content">
+
+<!--    <button id="sidebarCollapse" type="button" class="btn btn-light bg-primary rounded-pill shadow-sm px-4 mb-4"><i-->
+<!--            class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bold">Toggle Sidebar</small></button>-->
+
+    <div class="row text-black">
+        <h2 class="header">CLASS WISE SUBJECTS</h2>
+        <br>
+        <div>
+            <div class="subjects">
+                <div class="class1">
+                    <span>
+                        CLASS 1 <br>
+                        <br>
+                    </span>
+                    CLA100 Mathematics <br>
+                    CLA101 Social Science <br>
+                    CLA102 English <br>
+                    CLA103 General Knowledge <br>
+                    CLA104 EVS <br>
+                    CLA105 Drawing <br>
+                    CLA106 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class2">
+                    <span>
+                        CLASS 2 <br>
+                        <br>
+                    </span>
+                    CLA200 Mathematics <br>
+                    CLA201 Social Science <br>
+                    CLA202 English <br>
+                    CLA203 General Knowledge <br>
+                    CLA204 EVS <br>
+                    CLA205 Drawing <br>
+                    CLA206 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class3">
+                    <span>
+                        CLASS 3 <br>
+                        <br>
+                    </span>
+                    CLA300 Mathematics <br>
+                    CLA301 Social Science <br>
+                    CLA302 English <br>
+                    CLA303 General Knowledge <br>
+                    CLA304 EVS <br>
+                    CLA305 Drawing <br>
+                    CLA306 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class4">
+                    <span>
+                        CLASS 4 <br>
+                        <br>
+                    </span>
+                    CLA400 Mathematics <br>
+                    CLA401 Social Science <br>
+                    CLA402 English <br>
+                    CLA403 General Knowledge <br>
+                    CLA404 EVS <br>
+                    CLA405 Drawing <br>
+                    CLA406 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class5">
+                    <span>
+                        CLASS 5 <br>
+                        <br>
+                    </span>
+                    CLA500 Mathematics <br>
+                    CLA501 Social Science <br>
+                    CLA502 English <br>
+                    CLA503 General Knowledge <br>
+                    CLA504 EVS <br>
+                    CLA505 Drawing <br>
+                    CLA506 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class6">
+                    <span>
+                        CLASS 6 <br>
+                        <br>
+                    </span>
+                    CLA600 Mathematics <br>
+                    CLA601 Social Science <br>
+                    CLA602 English <br>
+                    CLA603 General Knowledge <br>
+                    CLA604 EVS <br>
+                    CLA605 Drawing <br>
+                    CLA606 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class7">
+                    <span>
+                        CLASS 7 <br>
+                        <br>
+                    </span>
+                    CLA700 Mathematics <br>
+                    CLA701 Social Science <br>
+                    CLA702 English <br>
+                    CLA703 General Knowledge <br>
+                    CLA704 EVS <br>
+                    CLA705 Drawing <br>
+                    CLA706 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class8">
+                    <span>
+                        CLASS 8 <br>
+                        <br>
+                    </span>
+                    CLA800 Mathematics <br>
+                    CLA801 Social Science <br>
+                    CLA802 English <br>
+                    CLA803 General Knowledge <br>
+                    CLA804 EVS <br>
+                    CLA805 Drawing <br>
+                    CLA806 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class9">
+                    <span>
+                        CLASS 9 <br>
+                        <br>
+                    </span>
+                    CLA900 Mathematics <br>
+                    CLA901 Social Science <br>
+                    CLA902 English <br>
+                    CLA903 General Knowledge <br>
+                    CLA904 EVS <br>
+                    CLA905 Drawing <br>
+                    CLA906 Computer <br>
+                    <br>
+                </div>
+
+                <div class="class10">
+                    <span>
+                        CLASS 10 <br>
+                        <br>
+                    </span>
+                    CLAX00 Mathematics <br>
+                    CLAX01 Social Science <br>
+                    CLAX02 English <br>
+                    CLAX03 General Knowledge <br>
+                    CLAX04 EVS <br>
+                    CLAX05 Drawing <br>
+                    CLAX06 Computer <br>
+                    <br>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- End demo content -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<script>
+    $(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+        });
+    });
+</script>
+{% endblock body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

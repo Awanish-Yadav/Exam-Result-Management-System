@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Result</title>
+    <link rel="icon" href="static/img.png" />
+</head>
+
+<body>
+    <!-- page navbar -->
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #66ffff, #66ffcc)"
+        role="navigation">
+        <ul class="navbar-nav" >
+            <li class="nav-item active">
+                <a class="nav-link" style="color: black; font-size:20px;" href="#">Mumbai University</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav print-btn">
+            <button  style="color:red" onclick="window.print()">
+                <i class="fa fa-print" style="font-size:24px"></i>
+            </button>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <a href="/logout"><button class="btn btn-danger navbar-btn" onclick="/logout">Logout</button></a>
+        </ul>
+    </nav>
+    <br />
+    <h3 style="display:flex;justify-content:center;">Result For The Academic Year 2022/2023</h3>
+
+    <!-- student profile -->
+    <div class="card-body" style="margin-left:20%">
+        {% for student_profile in profile_info %}
+        <b>Student Name: </b>{{student_profile.name}} <br />
+        <b>Student Email: </b>{{student_profile.email}} <br />
+        <b>Current class: </b>{{student_profile.currentClass}}<br />
+        <b>Gender: </b>{{student_profile.sex}} <br />
+        <b>Date of Birth: </b>{{student_profile.date_of_birth}} <br />
+        <b>School Name: </b>Some High School <br />
+        {% endfor %}
+    </div>
+
+    <!-- result table-->
+    <table class="table table-bordered" style="margin:auto;width:80%">
+        <thead style="background-color: lightSalmon">
+            <tr style="color: white">
+                <th scope="col">S/N</th>
+                <th scope="col">Code</th>
+                <th scope="col">Description</th>
+                <th scope="col">Result</th>
+            </tr>
+        </thead>
+        <tbody> 
+            {% for results in student_result %}
+                <tr>
+                    <td>{{ loop.index0 + 1 }}</td>
+                    <td>{{results.code}}</td>
+                    <td>{{results.description}}</td>
+                    <td>{{results.result}}</td>
+
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</body>
+
+</html>
