@@ -12,7 +12,7 @@ app.secret_key = '12345'
 # Configure database connection
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost/ers'
 #app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-app.config['SQLALCHEMY_DATABASE_URI']= 'postgres://ekgqjxoxmvwrxs:1efbb0cf2bc204e2879e7fdb41725b2b7b84b0db2462c00c14b204f6a8077acb@ec2-52-1-17-228.compute-1.amazonaws.com:5432/d5vdbp2elh8edp'
+app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql://ekgqjxoxmvwrxs:1efbb0cf2bc204e2879e7fdb41725b2b7b84b0db2462c00c14b204f6a8077acb@ec2-52-1-17-228.compute-1.amazonaws.com:5432/d5vdbp2elh8edp'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
