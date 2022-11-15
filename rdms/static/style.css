@@ -8,13 +8,16 @@
   height: 100vh;
 }
 
-.bg-image {
+/*.bg-image {
   background-image: url('images/home.jpg');
   width: 100%;
   background-position: center;
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
+}*/
+body {
+  background-color: #9999ff;
 }
 
 .d-flex {
@@ -22,7 +25,7 @@
 }
 
 .d-flex a {
-  color: red;
+  color: #ffcc66;
   font-family: Arial;
   font-weight: bolder;
   transition: 0.3s ease-in-out;
@@ -65,14 +68,3 @@
 }
 }
 
-@media screen and (max-width: 377px) {
-    .bg-image {
-    width: 130%;
-  } 
-}
-
-@media screen and (max-width: 300px) {
-    .bg-image {
-    width: 150%;
-  } 
-}
