@@ -3,9 +3,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 15vh;
-  background:lightSalmon;
+  background:white;
   border-radius:5px;
-  box-shadow:5px 5px 5px salmon;
+  box-shadow:5px 5px 5px gray;
   width:750px;
 }
 
