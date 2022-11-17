@@ -2,14 +2,9 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-
-# App secret key
-# Must be the same string present in '__init__.py'
 app.secret_key = '12345'
+app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql://ekgqjxoxmvwrxs:1efbb0cf2bc204e2879e7fdb41725b2b7b84b0db2462c00c14b204f6a8077acb@ec2-52-1-17-228.compute-1.amazonaws.com:5432/d5vdbp2elh8edp'
 
-# Must be the same connection present in '__init__.py'
-# app.config['SQLALCHEMY_DATABASE_URL']='mysql://username:password@host:port/database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost/ers'
 db = SQLAlchemy(app)
 
 student_details = {
@@ -17,7 +12,7 @@ student_details = {
 }
 
 admin_details = {
-    'test123@mu.admin': ('admin', True), 'test122@mu.admin': ('password', True)
+    'admin@mu.admin': ('admin', True), 'test122@mu.admin': ('password', True)
 }
 
 
