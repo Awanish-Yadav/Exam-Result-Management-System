@@ -78,12 +78,12 @@ def result():
     user_email = current_user.email
     # Query 'profiles' table for student profile details
     profile_info = db.engine.execute(
-                        f"SELECT * FROM `profiles` \
+                        f"SELECT * FROM profiles \
                         WHERE email = '{user_email}'") 
     # Query 'results' table for distinct student results
     student_result = db.engine.execute(
                         f"SELECT DISTINCT code, description, result \
-                        FROM `results` WHERE email = '{user_email}'") 
+                        FROM results WHERE email = '{user_email}'") 
     return render_template(
             'result.html', 
             profile_info=profile_info, 

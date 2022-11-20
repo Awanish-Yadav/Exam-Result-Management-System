@@ -7,7 +7,7 @@ from datetime import timedelta
 # Initialize flask app
 app = Flask(__name__) 
 
-app.secret_key = '12345'
+app.secret_key = '*****'
 
 # Configure database connection
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost/ers'
