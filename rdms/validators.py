@@ -11,7 +11,7 @@ def validate_admin_email(admin_email):
             return False, error_message
     except EmailNotValidError as e:
         return False, e
-    return True
+    return True,
 
 
 def validate_student_email(student_email):
@@ -23,7 +23,7 @@ def validate_student_email(student_email):
             return False, error_message
     except EmailNotValidError as e:
         return False, e
-    return True
+    return True,
 
 
 def validate_course_code(course_code):
