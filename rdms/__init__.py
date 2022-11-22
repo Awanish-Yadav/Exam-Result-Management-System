@@ -22,9 +22,7 @@ app.config['FLASK_ADMIN_FLUID_LAYOUT'] = True
 
 db = SQLAlchemy(app)
 
-student_details = {
-    'test123@mu.stu.edu': ('student', False), 'test122@mu.stu.edu': ('password', False)
-}
+
 
 admin_details = {
     'test@mu.admin': ('admin', True)
@@ -33,16 +31,6 @@ admin_details = {
 from rdms.models import Users,Students
 
 def insert_data():
-    # student_details = details()[0]
-    # admin_details = details()[1]
-
-    for email, user_details in student_details.items():
-        student = Users.query.filter_by(email=email).first()
-        if not student:
-            password = (user_details[0])
-            new_student = Users(email=email, password=password, admin=user_details[1])
-            db.session.add(new_student)
-            db.session.commit()
 
     for email, user_details in admin_details.items():
         admin = Users.query.filter_by(email=email).first()
@@ -52,16 +40,9 @@ def insert_data():
             db.session.add(new_admin)
             db.session.commit()
 
-    for email, user_details in student_details.items():
-        student = Students.query.filter_by(email=email).first()
-        if not student:
-            new_student = Students(email=email)
-            db.session.add(new_student)
-            db.session.commit()
-
 
 
 from rdms import routes
 with app.app_context():
     db.create_all()
-    #insert_data()
+    insert_data()
