@@ -64,4 +64,4 @@ def insert_data():
 from rdms import routes
 with app.app_context():
     db.create_all()
-    insert_data()
+    #insert_data()
