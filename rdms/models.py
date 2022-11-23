@@ -62,8 +62,6 @@ class Profiles(db.Model):
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), db.ForeignKey('students.email'), 
                       nullable=False, unique=True)
-    faculty = db.Column(db.String(100), nullable=False)
-    department = db.Column(db.String(100), nullable=False)
     currentClass = db.Column(db.Integer, nullable=False)
     subjects = db.Column(db.String(100),nullable=False)
     sex = db.Column(db.String(20), nullable=False)
@@ -74,7 +72,7 @@ class Profiles(db.Model):
     student_details = db.relationship('Results', backref='student_detail')
 
     def __repr__(self) -> str:
-        return f'{self.email} {self.currentClass} {self.department}'
+        return f'{self.name} {self.email} {self.currentClass} '
     
 # class Subject(db.Model):
 #     id = db.Column(db.Integer, primary_key=True)
@@ -165,6 +163,7 @@ class ProfileView(ModelView):
 
     form_excluded_columns = 'student_details'
 
+    column_labels = dict(currentClass='Current Class')
     # Make 'email and 'last_updated' field readonly
     form_widget_args = {
         'student_email': {
